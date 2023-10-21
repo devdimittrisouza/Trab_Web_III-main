@@ -1,0 +1,109 @@
+body 
+        {
+            background-color: #3E98AB;
+        }
+        
+        #carouselExampleIndicators {
+            padding-top: 30px;
+        }
+            
+
+        @media screen and (max-width: 500px) { 
+        #carouselExampleIndicators       
+        {            
+            padding-top: 20px;                    
+        }
+    }        
+
+    .carousel-item {
+    max-width: 1000px; /* Set the maximum width */
+    min-width: 400px; /* Set the minimum width */
+    max-height: 800px; /* Set the maximum height */
+   /* min-height: 200px; /* Set the minimum height */   
+   
+}
+  
+
+    .img-promocao{
+        padding-left: 10px;
+        padding-top: 30px; 
+        max-width:300px; 
+        max-height:200px; 
+        padding-bottom: 50px;   
+        /*vertical-align: baseline;*/
+        /*vertical-align: -webkit-baseline-middle;*/
+        /*margin-top: -100px;*/
+        
+    }
+
+    
+
+    .img-promocaopequena{
+        padding-bottom: 10px;
+        height: auto;
+        max-width: 90%;
+    }
+
+    .img-promocaopequena2{
+        margin-bottom: 10px;
+        margin-top: 0px;
+        height: auto;
+        max-width: 90%;
+    }
+
+    .img-promocaopequena3{
+        /*margin-left: 120px;*/
+        /*padding-top: 230px;*/
+        margin-bottom: 35px;
+        /*height: auto;
+        /*max-width: 90%;*/
+        
+    }
+
+    @media screen and (max-width: 500px) { 
+        .img-promocao 
+        
+        {
+            padding-top: 5px;
+            margin-bottom: 310px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+                    
+            
+        }
+    }
+
+    @media screen and (max-width: 500px) { 
+        .img-promocaopequena3
+
+        {
+            padding-top: 20px;
+            margin-bottom: 10px; 
+            text-align: center;           
+            margin-left: 0px;
+            
+        }
+    }
+
+    @media screen and (max-width: 500px) { 
+        .row
+        
+        {
+            
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            
+            
+        }
+    }
+
+    
+        #carouselExampleIndicators{
+            height: auto;
+            /*max-width: 100%;  */
+        }
+
+        .carousel-item, .active{
+            padding-bottom: 0px;
+        }
