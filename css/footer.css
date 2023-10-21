@@ -1,0 +1,86 @@
+footer {
+    background-color: #E7CFA1 !important;
+    bottom: 0;
+   /* width: 100%;
+    /*background-color: #333; /* Escolha a cor de fundo desejada */
+    color: white; /* Escolha a cor do texto desejada */
+    padding: 0px; /* Adicione algum espaço entre o conteúdo do footer e as bordas */
+          
+}
+
+@media screen and (max-width: 500px) { 
+    footer        
+    {            
+        margin-top: 200px  !important;                   
+    }
+}
+
+
+#Divfooter1 ul,
+#Divfooter2 ul,
+#Divfooter3 ul,
+#Divfooter4 ul {
+text-align: left;
+}
+
+.Ulfooter {
+    list-style-type: none;
+    font-weight: bold;
+    color:black;
+}
+
+.UlfooterSocial li {
+    display: inline-block;
+    margin-right: 8px;
+    list-style-type: none;
+    font-weight: bold;
+    color: black;
+
+}
+
+.UlfooterSocial li:first-child {
+    display: block;
+    text-decoration: underline;
+    color:black;
+}
+
+
+.Ulfooter li:first-child {
+    text-decoration: underline;
+    color:black;
+}
+
+
+.Ulfooter li:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.UlfooterSocial li:hover {
+    color: red;
+}
+
+.icone-svg path {
+    fill: #000;
+    transition: fill 0.3s;
+}
+
+.icone-circulo {
+    fill: #000;
+    transition: fill 0.3s;
+}
+
+.icone-circulo:hover {
+    fill: red;
+}
+
+.UlfooterSocial li:first-child:hover {
+    color: black;
+}
+
+.Ulfooter li:first-child:hover {
+    color: black;
+}
+
+ 
+
