@@ -22,18 +22,19 @@
 }
 
 .dropdown{
-    border: 5px solid;
-    border-radius: 100px;
+    /*border: 5px solid;
+    /*border-radius: 10px;*/
     list-style-type: none;
-    text-transform: uppercase;            
+    text-transform: uppercase;   
+             
 }
 .btn-dark{
     /*text-align: right;
     /*background-color: red !important;
    /* margin-left: 500px !important;*/
     /*float: right;
-    position: absolute;*/
-    /*top: center;
+    position: absolute;
+    top: center;
     /*right: 10px;*/
     border-radius: 15px;
     border:5px solid;
@@ -42,13 +43,13 @@
 }
 
 .btn-light{
-    text-align: right;
+    /*text-align: right;
     /*background-color: red !important;
    /* margin-left: 500px !important;*/
-    float: right;
-    position: absolute;
-    top: center;
-    right: 100px;
+    /*float: right;
+    /*position: absolute;
+    top: center;*/
+    /*right: 100px;*/
     border-radius: 20px;
     border:5px solid;
     border-width: thick;

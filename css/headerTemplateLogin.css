@@ -69,13 +69,13 @@
 }
 
 .btn-light{
-    text-align: right;
+   /* text-align: right;
     /*background-color: red !important;
    /* margin-left: 500px !important;*/
-    float: right;
-    position: absolute;
-    top: center;
-    right: 100px;
+    /*float: right;
+    position: absolute;*/
+   /* top: center;*/
+    /*right: 100px;*/
     border-radius: 20px;
     border:5px solid;
     border-width: thick;
