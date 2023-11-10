@@ -1,4 +1,9 @@
 function chamaTelaCadastro(){
 
-    window.location.href = "CadastroCli.html";
+    window.location.href = "../html/CadastroCli.html";
+}
+
+function chamaTelaLogin(){
+
+    window.location.href = "../html/LoginCli.html";
 }
