@@ -83,3 +83,22 @@
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.carrinho {
+
+    width: 500px;
+    height: 150px;
+    background-color: #FFFFFF;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+}
+
+.alignItem {
+
+    color: #000000;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
