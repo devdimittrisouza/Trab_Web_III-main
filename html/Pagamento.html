@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="../css/styles.css">
     <script src="../js/logic.js"></script>
 
-    <title>Delivery</title>
+    <title>Pagamento</title>
 </head>
 
 <body>
@@ -90,22 +90,46 @@
     -->
     <div class="form-inline my-2 my-lg-0 d-flex justify-content-center tituloTela">
         <div style="text-align: center;">
-            <h1>Delivery</h1>
+            <h1>Pagamento</h1>
             <br>
-            <img src="../img/delivery.png" alt="ilustracao-pizza">
+            <img src="../img/pagar.png" alt="ilustracao-pizza">
         </div>
     </div>
 
     <form class="form-inline my-2 my-lg-0 d-flex justify-content-center">
-        <div>
-            <p class="pInfo">CEP: <input class="form-control mr-sm-2 inputForms" type="text" placeholder="CEP" aria-label="CEP"></p><br>
-            <p class="pInfo">Logradouro: <input class="form-control mr-sm-2 inputForms" type="text" placeholder="Logradouro" aria-label="Logradouro"></p><br>
-            <p class="pInfo">Número: <input class="form-control mr-sm-2 inputForms" type="text" placeholder="Numero" aria-label="Numero"></p><br>
-            <p class="pInfo">Complemento: <input class="form-control mr-sm-2 inputForms" type="text" placeholder="Complemento" aria-label="Complemento"></p><br>
-            <p class="pInfo">Referencia: <input class="form-control mr-sm-2 inputForms" type="text" placeholder="Referencia" aria-label="Referencia"></p><br>
-            
+        <div style="text-align: center;">
+
+
+            <label class="labelPag" for="pagamento">Selecione sua forma de pagamento</label><br />
+            <select id="tipoPag" name="pagamentos" class="comboBox" onchange="mudarLayout()">
+                <option value="layoutCred">Crédito</option>
+                <option value="layoutDeb">Débito</option>
+                <option value="layoutPix">Pix</option>
+            </select>
+
+            <div class="layoutCred">
+                <br>
+                <p class="pInfo">Nome:&nbsp;<input type="text" placeholder="Cristiano Ronaldo" class="inputForms"></p>
+                <p class="pInfo">Número:&nbsp;<input type="text" placeholder="1234 1234 123 1234" class="inputForms">
+                </p>
+                <p class="pInfo">Validade:&nbsp;<input type="text" placeholder="MM/AA" class="inputForms"></p>
+                <p class="pInfo">CVC:&nbsp;<input type="text" placeholder="123" class="inputForms"></p>
+            </div>
+
+            <div class="layoutDeb">
+                <br>
+                <label for="infoDeb" style="font-weight: bold; color: #FFFFFF;">O pagamento será feito na entrega!</label>
+            </div>
+
+            <div class="layoutPix">
+                <br>
+                <label for="infoPix" style="font-weight: bold; color: #FFFFFF;" id="codPix">Clique no botão abaixo para gerar o código pix</label>
+                <br>
+                <button type="button" class="btn-light" onclick="gerarPix()">Gerar código pix</button>
+            </div>
+
             <div class="form-inline my-2 my-lg-0 d-flex justify-content-center">
-                <button type="button" class="btnConfirm" onclick="chamaTelaPagamento()">Confirmar</button>
+                <button type="button" class="btnPagar" onclick="chamaTelaPreparacao()">Pagar</button>
             </div>
         </div>
     </form>
@@ -149,14 +173,50 @@
                             width="32" ; height="32"></li>
                     <li><img src="../img/facebook.svg" class="teste w3-text-orange" alt="Descrição da imagem SVG"
                             width="32" ; height="32"></li>
-                    <li><img src="../img/twitter.svg" class="teste w3-text-orange" alt="Descrição da imagem SVG" width="32"
-                            ; height="32"></li>
+                    <li><img src="../img/twitter.svg" class="teste w3-text-orange" alt="Descrição da imagem SVG"
+                            width="32" ; height="32"></li>
                 </ul>
 
             </div>
         </div>
 
     </footer>
+
+    <script>
+        function mudarLayout(){
+
+            console.log("Entrou no mudarLayout()")
+
+            var select = document.getElementById("tipoPag");
+            var selectedValue = select.value;
+
+            console.log("Opção selecionada: " + selectedValue)
+
+            //Ocultar tudo
+            var elementos = document.querySelectorAll('.layoutCred, .layoutDeb, .layoutPix')
+            for(var i = 0; i < elementos.length; i++){
+
+                elementos[i].style.display = 'none';
+            }
+
+            console.log("passou do for")
+
+            //Exibir o elemento correspondente à opção selecionada
+            var selectedElement = document.querySelector('.' + selectedValue);
+            if(selectedElement){
+
+                selectedElement.style.display = 'block';
+                console.log("validado")
+            }
+        }
+
+        function gerarPix(){
+
+            var codPix = document.getElementById("codPix");
+
+            codPix.textContent = "AOUSHFH96UIYDASOJHD2L3JHDDJASDAOSIDJIAJSBD76ASDAHVSJDL12JH2DLJ1LJHBSDHASODH";
+        }
+    </script>
 </body>
 
 </html>
