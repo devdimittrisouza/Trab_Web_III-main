@@ -1,0 +1,112 @@
+body {
+    background-color: #3E98AB;
+}
+
+#carouselExampleIndicators {
+    padding-top: 30px;
+}
+
+
+@media screen and (max-width: 500px) {
+    #carouselExampleIndicators {
+        padding-top: 20px;
+    }
+}
+
+.teste {
+
+    margin: 0 auto;
+    max-width: 800px;
+    /* Set the maximum width */
+    min-width: 100px;
+    /* Set the minimum width */
+    max-height: 800px;
+    /* Set the maximum height */
+    min-height: 100px;
+    /* Set the minimum height */
+
+}
+
+.carousel-item {
+
+    max-width: 800px;
+    /* Set the maximum width */
+    min-width: 100px;
+    /* Set the minimum width */
+    max-height: 800px;
+    /* Set the maximum height */
+    min-height: 100px;
+    /* Set the minimum height */
+
+}
+
+.Titulopg {
+
+    text-align: center;
+    /* background-color:aqua; */
+    height: 70px;
+    padding-top: 20px;
+    color: #E7CFA1;
+    text-transform: uppercase;
+
+
+}
+
+.img-promocao {
+    padding-left: 10px;
+    padding-top: 30px;
+    max-width: 300px;
+    max-height: 200px;
+    padding-bottom: 50px;
+    /*vertical-align: baseline;*/
+    /*vertical-align: -webkit-baseline-middle;*/
+    /*margin-top: -100px;*/
+
+}
+
+
+
+@media screen and (max-width: 500px) {
+    .img-promocao {
+        padding-top: 5px;
+        margin-bottom: 310px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+
+    }
+}
+
+/* @media screen and (max-width: 500px) { 
+        .img-promocaopequena3
+
+        {
+            padding-top: 20px;
+            margin-bottom: 10px; 
+            text-align: center;           
+            margin-left: 0px;
+            
+        }
+    } */
+
+@media screen and (max-width: 500px) {
+    .row {
+
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+
+
+    }
+}
+
+
+#carouselExampleIndicators {
+    height: auto;
+    /*max-width: 100%;  */
+}
+
+.carousel-item,
+.active {
+    padding-bottom: 0px;
+}

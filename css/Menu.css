@@ -1,0 +1,59 @@
+body {
+    background-color: #3E98AB;
+}
+
+.Menu-box {
+
+    /*position: relative;
+    top: 100px;
+    left: 600px;
+    background: black;*/
+
+    margin: 0 auto;
+    color: white;
+    height: 400px;
+    width: 800px;
+    padding: 70px;
+    text-align: center;
+    /* margin: 20px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;*/
+}
+
+.Menu-box button {
+
+    text-align: center;
+    height: 70px;
+    width: 600px;
+    margin-bottom: 50px;
+    color:#3E98AB !important;
+    background-color:#E7CFA1;
+    background-image:none;
+    border-color:#E7CFA1 !important;
+    border:3px solid;
+    text-transform: uppercase;
+    border-radius: 200px;
+
+
+}
+
+.Menu-box :hover {
+
+    background-color:#E7CFA1 !important;
+    border-color:#E7CFA1 !important;
+    color:#3E98AB !important;
+    border-color: #3E98AB !important;
+
+}
+
+.Titulopg {
+
+    text-align: center;
+    /* background-color:aqua; */
+    height: 70px;
+    padding-top: 20px;
+    color: #E7CFA1;
+    text-transform: uppercase;
+
+}
