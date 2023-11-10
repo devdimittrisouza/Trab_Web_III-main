@@ -35,17 +35,6 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Adding space and buttons into navbar -->
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-        <button class="btnNavBar" onclick="chamaTelaMenu()">Menu</button>
-
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-        <button class="btnNavBar" onclick="chamaTelaPromo()">Promoções</button>
-
         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
 
             <div class="ml-auto">
@@ -65,14 +54,7 @@
                             </div>
                         </div>
                     </li>
-                    <li style="padding-right: 15px; padding-bottom: 5px">
-                        <button type="button" class="btn btn-light" onclick="chamaTelaCadastro()">Criar conta</button>
-                    </li>
-                    <li style="padding-right: 15px; padding-bottom: 5px">
-                        <button type="button" class="btn btn-dark" onclick="chamaTelaLogin()">Entrar</button>
-                    </li>
                 </ul>
-
             </div>
 
         </div>
@@ -118,12 +100,14 @@
 
             <div class="layoutDeb">
                 <br>
-                <label for="infoDeb" style="font-weight: bold; color: #FFFFFF;">O pagamento será feito na entrega!</label>
+                <label for="infoDeb" style="font-weight: bold; color: #FFFFFF;">O pagamento será feito na
+                    entrega!</label>
             </div>
 
             <div class="layoutPix">
                 <br>
-                <label for="infoPix" style="font-weight: bold; color: #FFFFFF;" id="codPix">Clique no botão abaixo para gerar o código pix</label>
+                <label for="infoPix" style="font-weight: bold; color: #FFFFFF;" id="codPix">Clique no botão abaixo para
+                    gerar o código pix</label>
                 <br>
                 <button type="button" class="btn-light" onclick="gerarPix()">Gerar código pix</button>
             </div>
@@ -173,8 +157,8 @@
                             width="32" ; height="32"></li>
                     <li><img src="img/facebook.svg" class="teste w3-text-orange" alt="Descrição da imagem SVG"
                             width="32" ; height="32"></li>
-                    <li><img src="img/twitter.svg" class="teste w3-text-orange" alt="Descrição da imagem SVG"
-                            width="32" ; height="32"></li>
+                    <li><img src="img/twitter.svg" class="teste w3-text-orange" alt="Descrição da imagem SVG" width="32"
+                            ; height="32"></li>
                 </ul>
 
             </div>
@@ -183,7 +167,7 @@
     </footer>
 
     <script>
-        function mudarLayout(){
+        function mudarLayout() {
 
             console.log("Entrou no mudarLayout()")
 
@@ -194,7 +178,7 @@
 
             //Ocultar tudo
             var elementos = document.querySelectorAll('.layoutCred, .layoutDeb, .layoutPix')
-            for(var i = 0; i < elementos.length; i++){
+            for (var i = 0; i < elementos.length; i++) {
 
                 elementos[i].style.display = 'none';
             }
@@ -203,20 +187,30 @@
 
             //Exibir o elemento correspondente à opção selecionada
             var selectedElement = document.querySelector('.' + selectedValue);
-            if(selectedElement){
+            if (selectedElement) {
 
                 selectedElement.style.display = 'block';
                 console.log("validado")
             }
         }
 
-        function gerarPix(){
+        function gerarPix() {
 
             var codPix = document.getElementById("codPix");
 
             codPix.textContent = "AOUSHFH96UIYDASOJHD2L3JHDDJASDAOSIDJIAJSBD76ASDAHVSJDL12JH2DLJ1LJHBSDHASODH";
         }
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
