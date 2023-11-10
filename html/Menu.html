@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../css/header1.css">
-    <link rel="stylesheet" href="../css/Menu.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="css/header1.css">
+    <link rel="stylesheet" href="css/Menu.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100&family=Space+Mono&display=swap"
         rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="../img/87a70953-c35f-456e-a9fe-7b012f7e7f2d.ico">
+    <link rel="icon" type="image/x-icon" href="img/87a70953-c35f-456e-a9fe-7b012f7e7f2d.ico">
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -65,8 +65,8 @@
                                 MENU
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Cardápio</a>
-                                <a class="dropdown-item" href="#">Promoções</a>
+                                <a class="dropdown-item" href="Menu.html">Cardápio</a>
+                                <a class="dropdown-item" href="index.html">Promoções</a>
                                 <a class="dropdown-item" href="#">Alguma coisa aqui</a>
                             </div>
                         </div>
@@ -88,7 +88,7 @@
     </nav>
 
 
-    <img src="../img/87a70953-c35f-456e-a9fe-7b012f7e7f2d.jpg" alt="logo-pizzaria" id="img-logo"
+    <img src="img/87a70953-c35f-456e-a9fe-7b012f7e7f2d.jpg" alt="logo-pizzaria" id="img-logo"
         class="logo-pizzaria img-logo">
 
     <div class="Titulopg">
@@ -100,11 +100,10 @@
 
     <div class="Menu-box">
 
-        <button class="btn btn-pizzas" type="button">Pizzas</button>
-        <button class="btn btn-lanches" type="button">Lanches</button>
-        <button class="btn btn-sobremesas" type="button">Sobremesas</button>
-        <button class="btn btn-bebidas" type="button">Bebidas</button>
-
+        <button class="btn btn-pizzas" onclick="document.location='MenuPizza.html'" type="button">Pizzas</button>
+        <button class="btn btn-lanches" onclick="document.location='MenuLanche.html'" type="button">Lanches</button>
+        <button class="btn btn-sobremesas" onclick="document.location='MenuSobremesa.html'" type="button">Sobremesas</button>
+        <button class="btn btn-bebidas" onclick="document.location='MenuBebida.html'" type="button">Bebidas</button>
 
     </div>
 
