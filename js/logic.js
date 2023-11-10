@@ -23,3 +23,8 @@ function chamaTelaPreparacao() {
     console.log("chamou a tela de preparação");
     window.location.href = "../html/TelaPreparacao.html";
 }
+
+function chamaTelaEntrega(){
+
+    window.location.href = "../html/entrega.html"
+}
