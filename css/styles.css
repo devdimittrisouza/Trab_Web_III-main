@@ -22,6 +22,7 @@
 
     background-color: #e7cfa1;
     border-radius: 15px;
+    padding: 5px;
 }
 
 .pInfo {
@@ -29,6 +30,7 @@
     color: #e7cfa1;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    font-size: 20px;
 }
 
 .forgotPwd {
@@ -44,4 +46,40 @@
     border: none;
     font-weight: bold;
     font-size: 20px;
+}
+
+.comboBox {
+
+    background-color: #e7cfa1;
+    font-size: 16px;
+    width: 250px;
+}
+
+.labelPag {
+
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.layoutCred {
+    display: none;
+}
+
+.layoutDeb {
+    display: none;
+}
+
+.layoutPix {
+    display: none;
+}
+
+.btnPagar {
+
+    background-color: #007F5B;
+    border-radius: 20PX;
+    padding: 10px;
+    width: 200px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }

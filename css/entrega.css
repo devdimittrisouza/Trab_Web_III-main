@@ -1,0 +1,68 @@
+body {
+    background-color: #3E98AB;
+}
+
+#carouselExampleIndicators {
+    padding-top: 30px;
+}
+
+@media screen and (max-width: 500px) {
+    #carouselExampleIndicators {
+        padding-top: 20px;
+    }
+}
+
+.container {
+    background-color: #fff;
+    width: 100%; /* Largura do container 100% para ser responsivo */
+    max-width: 1000px; /* Defina uma largura máxima para evitar que o contêiner fique muito largo */
+    height: 400px; /* Altura do container */
+    border: 1px solid #000;
+    text-align: center;
+    position: relative;
+    margin-top: 300px;
+    border-radius: 50px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Colocar as imagens à esquerda e à direita */
+}
+.or-text {
+    font-size: 1.5em; /* Tamanho do texto "ou" */
+    margin: 0 20px; /* Espaço entre o texto "ou" e as imagens */
+}
+
+.image-wrapper {
+    flex: 1;
+    text-align: center;
+}
+
+img {
+    max-width: 100%; /* Para garantir que a imagem não ultrapasse o contêiner */
+    max-height: 100%; /* Para garantir que a imagem não ultrapasse o contêiner */
+    display: block;
+    margin: 0 auto; /* Centralizar horizontalmente a imagem dentro do contêiner */
+    margin-top: 200px;
+}
+
+.legendabike {
+    margin-top: 2%; /* Espaço entre a imagem e a legenda usando porcentagem */
+    font-size: 2em; /* Tamanho da fonte da legenda usando em ou em porcentagem */
+    color: #333; /* Cor da legenda */
+}
+
+.bar {
+    background-color: #E7CFA1;
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+}
+
+h2 {
+    margin-top: 50px;
+    text-align: center;
+}
