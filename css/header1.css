@@ -107,9 +107,7 @@
             -webkit-text-fill-color: transparent;
 
             line-height: 0.99650081em;
-            text-align: center;
-
-            
+            text-align: center;            
 
            /* color: transparent; /* Torna o texto invisível */
            /* background-clip: text; /* Define a área onde o fundo deve ser exibido como o texto */
@@ -117,6 +115,16 @@
            /* text-fill-color: transparent; /* Torna a cor do texto transparente */
           /*  background-image: linear-gradient(45deg, #ff00ff, #00ffff);*/
         }
+
+        .textColor
+        {   
+            -webkit-text-stroke: 0.02375em rgb(231, 297, 161);
+            -webkit-text-fill-color: transparent;
+            text-decoration-line:underline;
+            color:#E7CFA1
+        }
+
+
         @media screen and (max-width: 500px) { 
             
         }
