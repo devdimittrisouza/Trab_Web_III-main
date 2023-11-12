@@ -1,0 +1,45 @@
+body {
+    background-color: #3E98AB;
+}
+
+
+
+.btn-primary{
+    background-color: #E53838 !important;
+    border-color: #E53838;
+    border-radius: 20px;
+}
+
+.btn-primary:hover{
+    background-color: #931313 !important;
+    border-color: #931313;
+}
+
+.card{
+    max-width: 200px;
+    max-height: 500px;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.card-img-top{
+    max-width: 150px;
+    max-height: 150px;
+    padding-top: 10px;
+    border-radius: 15px;
+}
+
+.card-text{
+    font-size: 10px;
+    
+}
+
+.card-title{
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.card-body{
+    max-width: 140px;
+    max-height: 150px;
+}
