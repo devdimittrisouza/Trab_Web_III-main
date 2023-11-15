@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../css/header1.css">
-    <link rel="stylesheet" href="../css/mainbody.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="css/header1.css">
+    <link rel="stylesheet" href="css/mainbody.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,9 +21,9 @@
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     
-    <script src="../js/logic.js"></script>
+    <script src="js/logic.js"></script>
     <title>Login</title>
 </head>
 
@@ -71,7 +71,7 @@
 
     </nav>
 
-    <img src="../img/87a70953-c35f-456e-a9fe-7b012f7e7f2d.jpg" alt="logo-pizzaria" id="img-logo"
+    <img src="img/87a70953-c35f-456e-a9fe-7b012f7e7f2d.jpg" alt="logo-pizzaria" id="img-logo"
         class="logo-pizzaria img-logo">
 
     <!--
@@ -84,14 +84,16 @@
         <div style="text-align: center;">
             <h1>Login</h1>
             <br>
-            <img src="../img/homem-usuario.png" alt="ilustracao-pizza">
+            <img src="img/homem-usuario.png" alt="ilustracao-pizza">
         </div>
     </div>
 
     <form class="form-inline my-2 my-lg-0 d-flex justify-content-center">
         <div>
-            <p class="pInfo">Telefone:&nbsp;<input class="form-control mr-sm-2 inputForms" type="text" placeholder="Telefone" aria-label="Telefone"></p><br>
-            <p class="pInfo">Senha:&nbsp;<input class="form-control mr-sm-2 inputForms" type="text" placeholder="Senha" aria-label="Senha"></p>
+            <input class="form-control mr-sm-2 inputForms placeholder" type="text" placeholder="Telefone" aria-label="Telefone"
+            required>
+            <br><br>
+            <input class="form-control mr-sm-2 inputForms placeholder" type="text" placeholder="Senha" aria-label="Senha" required>
 
             <div class="forgotPwd">
                 <a href="">Esqueceu a senha?</a>
@@ -104,7 +106,7 @@
         </div>
     </form>
 
-    <footer style="margin-top: 450px">
+    <footer style="margin-top: 100px">
 
         <div class="row">
             <div id="Divfooter1" class="col-lg-3 w-100">
@@ -133,7 +135,7 @@
 
                 <ul class="UlfooterSocial w-auto p-3">
                     <li>Conecte-se com PIZZA</li>
-                    <li><img src="../img/whatsapp.svg" class="teste w3-text-orange" alt="Descrição da imagem SVG"
+                    <li><img src="img/whatsapp.svg" class="teste w3-text-orange" alt="Descrição da imagem SVG"
                             width="32" ; height="32">
 
                     </li>
@@ -152,6 +154,15 @@
 
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

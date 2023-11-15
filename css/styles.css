@@ -37,6 +37,7 @@
 
     font-weight: bold;
     text-align: right;
+    color: #FFFFFF;
 
 }
 
@@ -101,4 +102,9 @@
     display: flex;
     align-items: center;
     margin-left: 10px;
+}
+
+.placeholder::placeholder {
+
+    color: #000000;
 }
