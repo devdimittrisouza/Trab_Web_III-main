@@ -8,23 +8,23 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/header1.css">
-    <link rel="stylesheet" href="css/Menu.css">
+    <link rel="stylesheet" href="css/mainbody.css">
     <link rel="stylesheet" href="css/footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100&family=Space+Mono&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100&family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="img/87a70953-c35f-456e-a9fe-7b012f7e7f2d.ico">
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Cardápio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/logic.js"></script>
 
+    <title>Carrinho</title>
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.html">
             <p><span class="logo-pizza" style="text-decoration-line:underline;color:#38a6a6;">Pizza</span></p>
@@ -36,24 +36,6 @@
 
         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
 
-            <!--
-                <button type="button" class="btn btn-light">Criar conta</button>
-                <button type="button" class="btn btn-dark">Entrar</button>
-                
-                <div class="ml-auto" style="margin-right: 220px">  
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Menu
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Cardápio</a>
-                        <a class="dropdown-item" href="#">Promoção</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Algo mais aqui</a>
-                        </div>
-                    </li>
-                      
-                </div>-->
             <div class="ml-auto">
                 <ul class="navbar-nav" style="list-style-type: none">
 
@@ -65,51 +47,65 @@
                                 MENU
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="Menu.html">Cardápio</a>
-                                <a class="dropdown-item" href="index.html">Promoções</a>
+                                <a class="dropdown-item" href="#">Cardápio</a>
+                                <a class="dropdown-item" href="#">Promoções</a>
                                 <a class="dropdown-item" href="#">Alguma coisa aqui</a>
                             </div>
                         </div>
-                    </li>
-                    <li style="padding-right: 15px; padding-bottom: 5px">
-                        <button type="button" class="btn btn-light" onclick="chamaTelaCadastro()">Criar conta</button>
-                    </li>
-                    <li style="padding-right: 15px; padding-bottom: 5px">
-                        <button type="button" class="btn btn-dark" onclick="chamaTelaLogin()">Entrar</button>
                     </li>
                 </ul>
 
             </div>
 
-
-
         </div>
 
     </nav>
 
-
     <img src="img/87a70953-c35f-456e-a9fe-7b012f7e7f2d.jpg" alt="logo-pizzaria" id="img-logo"
         class="logo-pizzaria img-logo">
 
-    <div class="Titulopg">
-
-      <h1>Cardápio</h1>
-
+    <!--
+    <form class="form-inline my-2 my-lg-0 d-flex justify-content-center">
+        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+    </form>
+    -->
+    <div class="form-inline my-2 my-lg-0 d-flex justify-content-center tituloTela">
+        <div style="text-align: center;">
+            <h1>Carrinho</h1>
+            <br>
+        </div>
     </div>
 
-
-    <div class="Menu-box">
-
-        <button class="btn btn-pizzas" onclick="document.location='MenuPizza.html'" type="button">Pizzas</button>
-        <button class="btn btn-lanches" onclick="document.location='MenuLanche.html'" type="button">Lanches</button>
-        <button class="btn btn-sobremesas" onclick="document.location='MenuSobremesa.html'" type="button">Sobremesas</button>
-        <button class="btn btn-bebidas" onclick="document.location='MenuBebida.html'" type="button">Bebidas</button>
-
+    <div class="carrinho">
+        <div id="item1" class="alignItem">
+            
+            <img src="img/calabresa.png" alt="foto pizza" style="height: 100px; width: 100px;">
+            <p style="font-size: 20px; margin-left: 20px;">Pizza de Calabresa</p>
+        </div>
     </div>
 
+    <div class="carrinho">
+        <div id="item2" class="alignItem">
+            <img src="img/coca.png" alt="foto coca" style="height: 100px; width: 100px;">
+            <p style="font-size: 20px; margin-left: 20px;">Coca cola</p>
+        </div>
+    </div>
 
+    <div class="carrinho">
+        <div id="item3" class="alignItem">
+            <img src="img/churros.png" alt="foto sobremesa" style="height: 100px; width: 100px;">
+            <p style="font-size: 20px; margin-left: 20px;">Churros</p>
+        </div>
+    </div>
 
-    <footer style="margin-top: 300px">
+    <div class="form-inline my-2 my-lg-0 d-flex justify-content-center">
+        <button type="button" class="btnConfirm" onclick="chamaTelaEntrega()">Confirmar</button>
+    </div>
+
+    
+
+    <footer style="margin-top: 100px">
 
         <div class="row">
             <div id="Divfooter1" class="col-lg-3 w-100">
@@ -157,16 +153,16 @@
 
     </footer>
 
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+    
 </body>
 
 </html>
