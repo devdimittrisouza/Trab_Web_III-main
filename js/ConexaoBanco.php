@@ -10,10 +10,33 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $json_data = file_get_contents("php://input");
     $data = json_decode($json_data, true);
 
-    if($data && isset($data['nome']) && isset($data['endereco'])){
+    if($data && isset($data['nome']) 
+    && isset($data['cpf'])
+    && isset($data['email'])
+    && isset($data['telefone'])
+    && isset($data['cep'])
+    && isset($data['logra'])
+    && isset($data['numeroCasa'])
+    && isset($data['cidade'])
+    && isset($data['bairro'])
+    && isset($data['complemento'])
+    && isset($data['senha'])
 
-        $nome = $data['nome'];
-        $endereco = $data['endereco'];
+    /*
+    var nome = $('#nome').val();
+        var cpf = $('#cpf').val();
+        var email = $('#email').val();
+        var telefone = $('#telefone').val();
+        var cep = $('#cep').val();
+        var logra = $('#logra').val();
+        var numeroCasa = $('#numeroCasa').val();
+        var cidade = $('#bairro').val();
+        var complemento = $('#complemento').val();
+        var senha = $('#senha').val();
+        var confirmSenha = $('#confirmSenha').val();
+    */ 
+
+    ){
 
         $conexao = new mysqli($host, $usuario, $senha, $nome_do_banco);
 
@@ -22,7 +45,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             die('Falha na conexão com o banco'. $conexao->$conexao_error);
         }
 
-        $sql = "INSERT INTO CADASTRO (NOME, ENDERECO) VALUES (?, ?)";
+        $sql = "INSERT INTO CADASTRO (NOME, logra) VALUES (?, ?)";
         $stmt = $conexao->prepare($sql);
 
         $stmt->bind_param("ss", $nome, $endereco);
@@ -38,11 +61,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             echo json_encode($response);
         }
 
-        echo ''. $nome .''. $endereco .'';
+        //
     } else {
 
         http_response_code(400);
-        echo json_encode(['erro' => 'Dados invalidos']);
+        echo json_encode(['erro' => 'Dados invalidos' . ' '. $nome .' '. $endereco .' ']);
     }
 
 } else if($_SERVER['REQUEST_METHOD'] === 'GET'){
