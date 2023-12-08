@@ -193,7 +193,8 @@
         var cep = $('#cep').val();
         var logra = $('#logra').val();
         var numeroCasa = $('#numeroCasa').val();
-        var cidade = $('#bairro').val();
+        var cidade = $('#cidade').val();
+        var bairro = $('#bairro').val();
         var complemento = $('#complemento').val();
         var senha = $('#senha').val();
         var confirmSenha = $('#confirmSenha').val();
@@ -202,10 +203,12 @@
         var dados = {
             name: nome,
             cpf: cpf,
-            email: telefone,
+            email: email,
+            telefone: telefone,
             cep: cep,
             logra: logra,
             numeroCasa: numeroCasa,
+            bairro: bairro,
             cidade: cidade,
             complemento: complemento,
             senha: senha
@@ -215,7 +218,7 @@
         if (senha == confirmSenha && senha != "") {
 
             console.log("4");
-            
+
             $.ajax({
                 type: 'POST',
                 url: 'https://devweb2.ok.etc.br/js/ConexaoBanco.php',
@@ -223,7 +226,7 @@
                 data: JSON.stringify(dados),
                 success: function (response) {
 
-                    console.log("4.1");
+                    console.log("4.1.1");
                     console.log(response);
                     alert('Dados enviados com sucesso.');
                 },

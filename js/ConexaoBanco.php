@@ -22,33 +22,19 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     && isset($data['complemento'])
     && isset($data['senha'])
 
-    /*
-    var nome = $('#nome').val();
-        var cpf = $('#cpf').val();
-        var email = $('#email').val();
-        var telefone = $('#telefone').val();
-        var cep = $('#cep').val();
-        var logra = $('#logra').val();
-        var numeroCasa = $('#numeroCasa').val();
-        var cidade = $('#bairro').val();
-        var complemento = $('#complemento').val();
-        var senha = $('#senha').val();
-        var confirmSenha = $('#confirmSenha').val();
-    */ 
-
     ){
 
         $conexao = new mysqli($host, $usuario, $senha, $nome_do_banco);
 
-        if($conexao->$conexao_error){
+        if($conexao->connect_error){
 
-            die('Falha na conexão com o banco'. $conexao->$conexao_error);
+            die('Falha na conexão com o banco'. $conexao->connect_error);
         }
 
-        $sql = "INSERT INTO CADASTRO (NOME_CLI, CPF_CLI, EMAIL_CLI, TELEFONE_CLI, CEP_CLI, LOGRADOURO_CLI, NUMERO_CADA_CLI, CIDADE_CLI, BAIRRO_CLI, COMPLEMENTO_CLI, SENHA_CLI) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO CLIENTE (NOME_CLI, CPF_CLI, EMAIL_CLI, TELEFONE_CLI, CEP_CLI, LOGRADOURO_CLI, NUMERO_CADA_CLI, CIDADE_CLI, BAIRRO_CLI, COMPLEMENTO_CLI, SENHA_CLI) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $conexao->prepare($sql);
 
-        $stmt->bind_param("ssSSSSSSSSS", $nome, $cpf, $email, $telefone, $cep, $logra, $numeroCasa, $cidade, $bairro, $complemento, $senha);
+        $stmt->bind_param("ssSSSSSSSSS", $data['nome'], $data['cpf'], $data['email'], $data['telefone'], $data['cep'], $data['logra'], $data['numeroCasa'], $data['cidade'], $data['bairro'], $data['complemento'], $data['senha']);
 
         if($stmt->execute()){
 
@@ -64,8 +50,24 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         //
     } else {
 
+        /*
         http_response_code(400);
-        echo json_encode(['erro' => 'Dados invalidos' . ' '. $nome .' '. $endereco .' ']);
+        echo json_encode(['erro' => 'Dados invalidos' . ' ' . $nome . ' ' . $cpf . ' ' . $telefone]);
+        */
+        $nome = isset($data['nome']) ? $data['nome'] : '';
+        $cpf = isset($data['cpf']) ? $data['cpf'] : '';
+        $email = isset($data['email']) ? $data['email'] : '';
+        $telefone = isset($data['telefone']) ? $data['telefone'] : '';
+        $cep = isset($data['cep']) ? $data['cep'] : '';
+        $logra = isset($data['logra']) ? $data['logra'] : '';
+        $numeroCasa = isset($data['numeroCasa']) ? $data['numeroCasa'] : '';
+        $cidade = isset($data['cidade']) ? $data['cidade'] : '';
+        $bairro = isset($data['bairro']) ? $data['bairro'] : '';
+        $complemento = isset($data['complemento']) ? $data['complemento'] : '';
+        $senha = isset($data['senha']) ? $data['senha'] : '';
+
+        echo json_encode(['erro' => 'Dados inválidos - Nome: ' . $nome . ', CPF: ' . $cpf . ', Email: ' . $email . ', Telefone: ' . $telefone . ', CEP: ' . $cep . ', Logradouro: ' . $logra . ', Numero Casa: ' . $numeroCasa . ', Cidade: ' . $cidade . ', Bairro: ' . $bairro . ', Complemento: ' . $complemento . ', Senha: ' . $senha]);
+        
     }
 
 } else if($_SERVER['REQUEST_METHOD'] === 'GET'){
