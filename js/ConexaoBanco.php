@@ -45,10 +45,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             die('Falha na conexão com o banco'. $conexao->$conexao_error);
         }
 
-        $sql = "INSERT INTO CADASTRO (NOME, logra) VALUES (?, ?)";
+        $sql = "INSERT INTO CADASTRO (NOME_CLI, CPF_CLI, EMAIL_CLI, TELEFONE_CLI, CEP_CLI, LOGRADOURO_CLI, NUMERO_CADA_CLI, CIDADE_CLI, BAIRRO_CLI, COMPLEMENTO_CLI, SENHA_CLI) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $conexao->prepare($sql);
 
-        $stmt->bind_param("ss", $nome, $endereco);
+        $stmt->bind_param("ssSSSSSSSSS", $nome, $cpf, $email, $telefone, $cep, $logra, $numeroCasa, $cidade, $bairro, $complemento, $senha);
 
         if($stmt->execute()){
 
