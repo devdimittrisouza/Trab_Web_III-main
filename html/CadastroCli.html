@@ -185,6 +185,7 @@
 
     function confirmaCadastro() {
 
+        console.log("1");
         var nome = $('#nome').val();
         var cpf = $('#cpf').val();
         var email = $('#email').val();
@@ -196,6 +197,7 @@
         var complemento = $('#complemento').val();
         var senha = $('#senha').val();
         var confirmSenha = $('#confirmSenha').val();
+        console.log("2");
 
         var dados = {
             name: nome,
@@ -209,8 +211,10 @@
             senha: senha
         };
 
+        console.log("3");
         if (senha == confirmSenha && senha != "") {
 
+            console.log("4");
             $.ajax({
                 type: 'POST',
                 url: 'https://devweb2.ok.etc.br/js/ConexaoBanco.php',
@@ -218,27 +222,32 @@
                 data: JSON.stringify(dados),
                 success: function (response) {
 
+                    console.log("4");
                     console.log(response);
                     alert('Dados enviados com sucesso.');
                 },
                 error: function (error) {
 
+                    console.log("5");
                     console.log(error);
                     alert('Dados não enviados.');
                 }
             });
 
 
-            console.log("step 1");
+            console.log("step 6");
         } else if (senha != confirmSenha) {
 
+            console.log("7");
             window.alert("As senhas não coincidem.");
 
         } else if (senha == "" || confirmSenha == "") {
 
+            console.log("8");
             window.alert("Senha inválida.");
         }
 
+        console.log("9");
 
 
     }
